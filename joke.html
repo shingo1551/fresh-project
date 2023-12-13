@@ -1,0 +1,14 @@
+<html>
+
+<body>
+  <button>joke!</button>
+</body>
+<script>
+  const b = document.querySelector('button');
+  b.addEventListener('click', async (e) => {
+    const response = await fetch("http://192.168.11.3:8000/api/joke");
+    console.log(await response.text());
+  });
+</script>
+
+</html>
